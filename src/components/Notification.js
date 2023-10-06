@@ -30,7 +30,7 @@ const Notification = (props) => {
         <img className="w-10 " src={props.img} alt={props.user} />
       </span>
       <div className="flex justify-center flex-col">
-        <div className="flex justify-start items-start">
+        <div className="flex justify-start items-center">
           <p className="mr-1 font-bold">{props.user}</p>
           <p className="mr-1 font-thin text-gray-700">{props.action}</p>
           <p className="mr-1 font-bold">{props.group}</p>
@@ -38,9 +38,11 @@ const Notification = (props) => {
 
         <p>{props.post}</p>
         <p className="text-gray-500">{props.timestamp}</p>
-        <p className="hover:bg-gray-200 bg-inherit p-3 w-20px border-solid border-color-black">
-          {props.message}
-        </p>
+        {props.message && (
+          <p className="hover:bg-gray-200 bg-inherit p-3 w-20px border-solid border-color-black">
+            {props.message}
+          </p>
+        )}
       </div>
     </div>
   );
