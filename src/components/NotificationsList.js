@@ -3,7 +3,7 @@ import Notification from "./Notification.js";
 import notificationsData from "../data/notifications.json";
 const NotificationsList = (props) => {
   return (
-    <div className="mx-8 mb-8">
+    <section className="mx-8 mb-8">
       {notificationsData.map((post, index) => (
         <Notification
           key={index}
@@ -16,7 +16,7 @@ const NotificationsList = (props) => {
           funct={props.fun}
         />
       ))}
-    </div>
+    </section>
   );
 };
 

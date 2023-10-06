@@ -22,7 +22,7 @@ const Notification = (props) => {
   };
   const bgColor = colorBol ? "white" : "gray-200";
   return (
-    <div
+    <section
       className={"flex align-start  bg-" + bgColor + " rounded-2xl my-2"}
       onClick={combinefunctions}
     >
@@ -39,12 +39,12 @@ const Notification = (props) => {
         <p>{props.post}</p>
         <p className="text-gray-500">{props.timestamp}</p>
         {props.message && (
-          <p className="hover:bg-gray-200 bg-inherit p-3 w-20px border-solid border-color-black">
+          <p className="hover:bg-gray-200 bg-inherit p-3 w-20px border-solid border-color-slate-500">
             {props.message}
           </p>
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

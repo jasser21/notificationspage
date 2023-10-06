@@ -18,7 +18,7 @@ function App() {
     setOpacity(0);
   };
   return (
-    <div className="bg-white w-2/5  rounded-md block m-auto my-28 ">
+    <main className="bg-white w-2/5  rounded-md block m-auto my-28 ">
       <notificationsContext.Provider
         value={{ decrementNotfNumber, numofnotfopacity }}
       >
@@ -35,13 +35,13 @@ function App() {
               {numOfNotifications}
             </span>
           </h1>
-          <h4 className="m-8 text-md font-" onClick={() => markasread()}>
+          <h2 className="m-8 text-md font-" onClick={() => markasread()}>
             Mark all as read
-          </h4>
+          </h2>
         </div>
         <NotificationsList />
       </notificationsContext.Provider>
-    </div>
+    </main>
   );
 }
 
